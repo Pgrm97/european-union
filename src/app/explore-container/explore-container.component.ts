@@ -9,6 +9,7 @@ export class ExploreContainerComponent implements OnInit {
     @Input() name: string;
     DE: boolean;
     EU: boolean;
+    IT: boolean;
 
   constructor() { }
 
@@ -16,10 +17,17 @@ export class ExploreContainerComponent implements OnInit {
         if (this.name == "European Union") {
             this.DE = true;
             this.EU = false;
+            this.IT = true;
         }
         if (this.name == "Deutschland") {
             this.DE = false;
             this.EU = true;
+            this.IT = true;
+        }
+        if (this.name == "Italia") {
+            this.IT = false;
+            this.EU = true;
+            this.DE = true;
         }
     }
 
