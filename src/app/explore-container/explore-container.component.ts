@@ -6,10 +6,21 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./explore-container.component.scss'],
 })
 export class ExploreContainerComponent implements OnInit {
-  @Input() name: string;
+    @Input() name: string;
+    DE: boolean;
+    EU: boolean;
 
   constructor() { }
 
-  ngOnInit() {}
+    ngOnInit() {
+        if (this.name == "European Union") {
+            this.DE = true;
+            this.EU = false;
+        }
+        if (this.name == "Deutschland") {
+            this.DE = false;
+            this.EU = true;
+        }
+    }
 
 }
